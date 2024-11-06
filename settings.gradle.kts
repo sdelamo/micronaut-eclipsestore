@@ -8,7 +8,7 @@ pluginManagement {
 }
 
 plugins {
-    id("io.micronaut.build.shared.settings") version "7.2.0"
+    id("io.micronaut.build.shared.settings") version "7.2.3"
 }
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
@@ -30,6 +30,7 @@ include("test-suite-kotlin")
 configure<MicronautBuildSettingsExtension> {
     useStandardizedProjectNames.set(true)
     importMicronautCatalog()
+    importMicronautCatalog("micronaut-azure")
     importMicronautCatalog("micronaut-aws")
     importMicronautCatalog("micronaut-cache")
     importMicronautCatalog("micronaut-micrometer")
