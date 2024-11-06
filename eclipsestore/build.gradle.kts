@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
     compileOnly(mnMicrometer.micronaut.micrometer.core)
-    compileOnly(projects.micronautEclipsestoreAnnotations)
+
     implementation(platform(mnAws.micronaut.aws.bom))
     compileOnly(libs.awssdk.s3)
     compileOnly(libs.managed.eclipsestore.aws.s3)
@@ -22,6 +22,7 @@ dependencies {
     compileOnly(mnSql.micronaut.jdbc)
 
     api(libs.managed.eclipsestore.storage.embedded.configuration)
+    api(projects.micronautEclipsestoreAnnotations)
 
     implementation(mn.reactor)
     implementation(libs.eclipsestore.persistence.binary.jdk8)
@@ -34,7 +35,6 @@ dependencies {
     testImplementation(mn.micronaut.management)
     testImplementation(mn.micronaut.http.server.netty)
     testImplementation(mn.micronaut.http.client)
-    testImplementation(projects.micronautEclipsestoreAnnotations)
 
     testImplementation(projects.testSuiteUtils)
 

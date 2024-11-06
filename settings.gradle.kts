@@ -1,3 +1,5 @@
+import io.micronaut.build.MicronautBuildSettingsExtension
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -6,28 +8,27 @@ pluginManagement {
 }
 
 plugins {
-    id 'io.micronaut.build.shared.settings' version '7.2.3'
+    id("io.micronaut.build.shared.settings") version "7.2.3"
 }
-
-rootProject.name = 'eclipsestore-parent'
-
-include 'eclipsestore-bom'
-include 'eclipsestore'
-include 'eclipsestore-annotations'
-include 'eclipsestore-cache'
-include 'eclipsestore-rest'
-
-include 'test-suite'
-include 'test-suite-utils'
-include 'test-suite-groovy'
-include 'test-suite-kotlin'
-
-micronautBuild.useStandardizedProjectNames=true
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-micronautBuild {
-    useStandardizedProjectNames = true
+rootProject.name = "eclipsestore-parent"
+
+include("eclipsestore-bom")
+include("eclipsestore")
+include("eclipsestore-annotations")
+include("eclipsestore-cache")
+include("eclipsestore-rest")
+include("eclipsestore-processor")
+
+include("test-suite")
+include("test-suite-utils")
+include("test-suite-groovy")
+include("test-suite-kotlin")
+
+configure<MicronautBuildSettingsExtension> {
+    useStandardizedProjectNames.set(true)
     importMicronautCatalog()
     importMicronautCatalog("micronaut-azure")
     importMicronautCatalog("micronaut-aws")
