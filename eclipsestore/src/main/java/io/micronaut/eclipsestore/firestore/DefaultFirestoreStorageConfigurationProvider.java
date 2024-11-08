@@ -17,6 +17,7 @@ package io.micronaut.eclipsestore.firestore;
 
 import io.micronaut.context.annotation.EachProperty;
 import io.micronaut.context.annotation.Parameter;
+import io.micronaut.core.annotation.Internal;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
 
@@ -26,8 +27,9 @@ import java.util.Optional;
  * @author Simon Frauenschuh
  * @since 1.7.0
  */
+@Internal
 @EachProperty("eclipsestore.firestore.storage")
-public class DefaultFirestoreStorageConfigurationProvider implements FirestoreStorageConfigurationProvider {
+class DefaultFirestoreStorageConfigurationProvider implements FirestoreStorageConfigurationProvider {
 
     @NonNull
     private Class<?> rootClass;

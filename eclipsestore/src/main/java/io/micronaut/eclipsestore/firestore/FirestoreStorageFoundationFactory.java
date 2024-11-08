@@ -19,6 +19,7 @@ import com.google.cloud.firestore.Firestore;
 import io.micronaut.context.BeanContext;
 import io.micronaut.context.annotation.EachBean;
 import io.micronaut.context.annotation.Factory;
+import io.micronaut.core.annotation.Internal;
 import io.micronaut.inject.qualifiers.Qualifiers;
 import jakarta.inject.Singleton;
 import org.eclipse.store.afs.blobstore.types.BlobStoreFileSystem;
@@ -34,8 +35,9 @@ import org.slf4j.LoggerFactory;
  * @since 1.7.0
  * @author Simon Frauenschuh
  */
+@Internal
 @Factory
-public class FirestoreStorageFoundationFactory {
+class FirestoreStorageFoundationFactory {
 
     private static final Logger LOG = LoggerFactory.getLogger(FirestoreStorageFoundationFactory.class);
 
