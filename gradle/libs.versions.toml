@@ -5,8 +5,7 @@ groovy = "4.0.17"
 kotlin = '1.9.24'
 spock = "2.3-groovy-4.0"
 managed-eclipsestore='1.4.0'
-azure-blob = '12.26.1'
-firestore = '3.25.0
+firestore = '3.25.0'
 micronaut-aws = "4.6.0"
 micronaut-cache = "4.3.1"
 micronaut-azure = "5.5.1"
@@ -51,7 +50,7 @@ jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine' }
 kotlin-stdlib = { module = 'org.jetbrains.kotlin:kotlin-stdlib-jdk8', version.ref = 'kotlin' }
 
-azuresdk-blob = { module = 'com.azure:azure-storage-blob', version.ref = "azure-blob"}
+azuresdk-blob = { module = 'com.azure:azure-storage-blob'}
 firestore-sdk = { module = 'com.google.cloud:google-cloud-firestore', version.ref = 'firestore' }
 awssdk-s3 = { module = 'software.amazon.awssdk:s3' }
 awssdk-dynamodb = { module = 'software.amazon.awssdk:dynamodb' }
