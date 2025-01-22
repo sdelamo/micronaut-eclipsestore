@@ -26,7 +26,10 @@ public class FirestoreLocal {
         firebaseLocal.close();
     }
 
-    public static Firestore firestoreClient() {
+    public static Firestore firestoreClient() throws InterruptedException {
+        // The used Firestore docker image needs quite a boot-time, so this was the easiest fix.
+        Thread.sleep(2000);
+
         // Has to be set, otherwise the client instantiates correctly but fails when requests are tried to sen
         System.setProperty("FIRESTORE_EMULATOR_HOST", "localhost:8080");
 

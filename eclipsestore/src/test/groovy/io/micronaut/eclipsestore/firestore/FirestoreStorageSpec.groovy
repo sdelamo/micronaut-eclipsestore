@@ -7,8 +7,6 @@ import io.micronaut.core.annotation.NonNull
 import io.micronaut.core.util.StringUtils
 import io.micronaut.eclipsestore.BaseStorageSpec
 import io.micronaut.eclipsestore.testutils.FirestoreLocal
-import io.micronaut.eclipsestore.testutils.S3Configuration
-import io.micronaut.eclipsestore.testutils.S3ConfigurationProperties
 import io.micronaut.inject.qualifiers.Qualifiers
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import io.micronaut.test.support.TestPropertyProvider

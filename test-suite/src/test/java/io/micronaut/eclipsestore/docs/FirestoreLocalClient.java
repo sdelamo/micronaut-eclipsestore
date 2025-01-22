@@ -14,7 +14,7 @@ public class FirestoreLocalClient {
 
     @Singleton
     @Replaces(Firestore.class)
-    Firestore buildClient() {
+    Firestore buildClient() throws InterruptedException {
         return FirestoreLocal.firestoreClient();
     }
 }
